@@ -33,7 +33,7 @@ body {
 
 <div class="topnav">
   <a href="#home" onclick="myFunction()">Home</a>
-  <a href="#dashboard" onclick="myFunction()">Dashboard</a>
+  <a href="#dashboard" onclick="myFunction2()">Dashboard</a>
 </div>
 
 <div id="image-div" style="padding-left:16px; text-align: center;">
@@ -53,19 +53,15 @@ body {
 	function myFunction() {
 	  var x = document.getElementById("image-div");
 	  var y = document.getElementById("iframe-div");
-	  if (x.style.display === "none") {
-	  	x.style.display = "block";
-	  	y.style.display = "none";
-	  } else {
-	  	y.style.display = "block";
-		x.style.display = "none";
-	  }
-	  
-	  if (y.style.display === "none") {
-		x.style.display = "block";
-	  } else {
-		x.style.display = "none";
-	  }
+	  x.style.display = "block";
+	  y.style.display = "none";
+	}
+	
+	function myFunction() {
+	  var x = document.getElementById("image-div");
+	  var y = document.getElementById("iframe-div");
+	  x.style.display = "none";
+	  y.style.display = "block";
 	}
 </script>
 
