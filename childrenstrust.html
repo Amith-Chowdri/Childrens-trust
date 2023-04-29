@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #053D5A;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#home" onclick="myFunction()">Home</a>
+  <a href="#dashboard" onclick="myFunction()">Dashboard</a>
+</div>
+
+<div id="image-div" style="padding-left:16px; text-align: center;">
+  <h2>Public Dahboard Example</h2>
+  <p>Childrens Trust</p>
+  <img  src="https://i.ibb.co/C7yCr7K/Screenshot-from-2023-04-29-19-17-39.png" alt="childrens-trust" width="50%" height="100%">
+</div>
+
+<div id="iframe-div" style="padding-left:16px; text-align: center; display: none;">
+  <h2>Public Dahboard Example</h2>
+  <p>Childrens Trust</p>
+  <iframe src="https://app.powerbi.com/view?r=eyJrIjoiNjhiNTBiYTctMDY3OC00NDNiLThlMDMtZDRlZTcxZmRhMzU4IiwidCI6ImFkYTc5ZmMzLTUyNGItNDQ5OS1iMzhkLWE1ZmIyYWRhM2EyZSIsImMiOjJ9" title="Insights Dashboard" 
+  width="90%" height="500px"></iframe>
+</div>
+
+<script>
+	function myFunction() {
+	  var x = document.getElementById("image-div");
+	  var y = document.getElementById("iframe-div");
+	  if (x.style.display === "none") {
+	  	x.style.display = "block";
+	  	y.style.display = "none";
+	  } else {
+	  	y.style.display = "block";
+		x.style.display = "none";
+	  }
+	  
+	  if (y.style.display === "none") {
+		x.style.display = "block";
+	  } else {
+		x.style.display = "none";
+	  }
+	}
+</script>
+
+</body>
+</html>
