@@ -60,19 +60,18 @@ body {
 	  	y.style.display = "block";
 		x.style.display = "none";
 	  }
-	  
-	  if (y.style.display === "none") {
-		x.style.display = "block";
-	  } else {
-		x.style.display = "none";
-	  }
 	}
 	
 	function myFunction2() {
 	  var x = document.getElementById("image-div");
 	  var y = document.getElementById("iframe-div");
-	  x.style.display = "none";
-	  y.style.display = "block";
+	   if (y.style.display === "none") {
+	  	y.style.display = "block";
+	  	x.style.display = "none";
+	  } else {
+	  	x.style.display = "block";
+		y.style.display = "none";
+	  }
 	}
 </script>
 
